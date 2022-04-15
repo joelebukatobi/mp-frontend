@@ -1,0 +1,12 @@
+svg {
+  cursor: pointer;
+  &:hover {
+    fill: #1a8078;
+  }
+}
+
+button {
+  &:hover {
+    opacity: 0.8;
+  }
+}
