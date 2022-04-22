@@ -27,9 +27,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="border-[.1rem] border-purple/50 w-full" />
+        <hr className="border-0 h-[.24rem] md:h-[.32rem] bg-purple/50 w-full" />
         <div className="flex flex-col md:flex-row justify-between">
-          <p>
+          <p className="w-3/4 md:w-full">
             © 2022 Mell Pitcher. Designed & Developed by <span className="text-green hover:cursor-pointer">JetDev</span>
           </p>
           <div className="flex space-x-[1.6rem]  md:space-x-[4rem] mt-[2.4rem] md:mt-0">
