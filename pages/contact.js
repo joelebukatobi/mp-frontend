@@ -5,17 +5,17 @@ export default function Contact() {
     <Layout>
       <section
         id="hero"
-        className="container mx-auto w-full flex justify-between items-center px-[7.2rem] mt-[8rem] mb-[12rem]"
+        className="container mx-auto w-full flex flex-col md:flex-row justify-between items-center px-[3.2rem] md:px-[4rem] lg:px-[7.2rem] mt-[8rem] mb-[12rem]"
       >
-        <div className="w-[45%] text-black">
+        <div className="md:w-[45%] text-black">
           <div className="space-y-[1.6rem]">
             <p className="uppercase">Contact Us</p>
-            <hr className="border-[.05rem] border-green w-[8rem]" />
+            <hr className="bg-green h-[.24rem] md:h-[.32rem] border-0 w-[8rem]" />
             <h3>
               Hello <br />
               Let's Get In Touch
             </h3>
-            <p className="leading-[3.2rem]">
+            <p className="text-justify md:text-left leading-[3.2rem]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id aliquet purus, maecenas sodales eu diam enim
               sit. Egestas nunc non feugiat pharetra. Habitant adipiscing viverra ultrices nisl, at dictum orci, id
               urna. Sit a amet, ac mi facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id aliquet
@@ -28,9 +28,9 @@ export default function Contact() {
             <p>+234 81791883178</p>
           </div>
         </div>
-        <form className="flex flex-col w-[45%] space-y-[2.4rem]">
+        <form className="flex flex-col w-full md:w-[45%] mt-[6.4rem] md:mt-0 space-y-[2.4rem]">
           <div className="flex flex-col space-y-[.8rem]">
-            <label htmlFor="name" className="text-black">
+            <label htmlFor="name" className="text-green">
               Name
             </label>
             <input
@@ -41,7 +41,7 @@ export default function Contact() {
             />
           </div>
           <div className="flex flex-col space-y-[.8rem]">
-            <label htmlFor="email" className="text-black">
+            <label htmlFor="email" className="text-green">
               Email
             </label>
             <input
@@ -52,7 +52,7 @@ export default function Contact() {
             />
           </div>
           <div className="flex flex-col space-y-[.8rem]">
-            <label htmlFor="message" className="text-black">
+            <label htmlFor="message" className="text-green">
               Message
             </label>
             <textarea
@@ -65,7 +65,7 @@ export default function Contact() {
               Hi, there
             </textarea>
           </div>
-          <button className="bg-green rounded-[.8rem] h-[6.4rem] uppercase text-white w-1/3">Send Message</button>
+          <button className="bg-green rounded-[.8rem] h-[5.6rem] uppercase text-white md:w-1/3">Send Message</button>
         </form>
       </section>
     </Layout>
