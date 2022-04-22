@@ -62,7 +62,7 @@ export default function Home({ posts }) {
           <h2>Short Stories</h2>
           <p className="w-[64rem] text-center">
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqut enim ad minim{' '}
+            magna aliqut enim ad minim
           </p>
         </div>
 
