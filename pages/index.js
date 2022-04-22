@@ -1,10 +1,10 @@
+import { getPosts } from '@/services/index';
 import Banner from '@/components/Banner';
 import Layout from '@/components/Layout';
-export default function Home() {
+import PostCard from '@/components/PostCard';
+export default function Home({ posts }) {
   return (
     <Layout>
-      {/* overflow-hidden after:absolute after:content-[''] after:h-[100%] after:w-[100%] after:top-0 after:left-0 after:bg-purple/60 */}
-      {/* Header */}
       <section
         id="hero"
         className="h-[80rem] px-[7.2rem] flex items-center mt-[5.6rem] mb-[12rem] relative container mx-auto"
@@ -49,7 +49,9 @@ export default function Home() {
           <button className="h-[4.8rem] bg-green text-white rounded-[.8rem] px-[3.2rem] uppercase">Order Now</button>
         </div>
 
-        <img src="/images/book-cover.png" alt="" />
+        <div className="container w-1/2 flex justify-end">
+          <img src="/images/book-cover.png" alt="" className="h-full" />
+        </div>
       </section>
 
       {/* Short Stories */}
@@ -65,76 +67,21 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap gap-x-[5%] gap-y-[6.4rem]">
-          <div className="w-[30%] p-[1.6rem] rounded-[2.4rem] bg-gradient-to-b from-white to-lightgreen">
-            <img src="/images/blogpost-image-one.png" alt="" className="rounded-[2.4rem] mb-[1.6rem]" />
-            <h3 className="mb-[.8rem]">Blog Post One</h3>
-            <p className="mb-[.8rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className="flex space-x-[.8rem] items-center">
-              <svg className="w-[2.4rem] h-[2.4rem] fill-black">
-                <use href="/images/sprite.svg#icon-category" />
-              </svg>
-              <h5>Category</h5>
-            </div>
-          </div>
-          <div className="w-[30%] p-[1.6rem] rounded-[2.4rem] bg-gradient-to-b from-white to-lightgreen">
-            <img src="/images/blogpost-image-one.png" alt="" className="rounded-[2.4rem] mb-[1.6rem]" />
-            <h3 className="mb-[.8rem]">Blog Post One</h3>
-            <p className="mb-[.8rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className="flex space-x-[.8rem] items-center">
-              <svg className="w-[2.4rem] h-[2.4rem] fill-black">
-                <use href="/images/sprite.svg#icon-category" />
-              </svg>
-              <h5>Category</h5>
-            </div>
-          </div>
-          <div className="w-[30%] p-[1.6rem] rounded-[2.4rem] bg-gradient-to-b from-white to-lightgreen">
-            <img src="/images/blogpost-image-one.png" alt="" className="rounded-[2.4rem] mb-[1.6rem]" />
-            <h3 className="mb-[.8rem]">Blog Post One</h3>
-            <p className="mb-[.8rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className="flex space-x-[.8rem] items-center">
-              <svg className="w-[2.4rem] h-[2.4rem] fill-black">
-                <use href="/images/sprite.svg#icon-category" />
-              </svg>
-              <h5>Category</h5>
-            </div>
-          </div>
-          <div className="w-[30%] p-[1.6rem] rounded-[2.4rem] bg-gradient-to-b from-white to-lightgreen">
-            <img src="/images/blogpost-image-one.png" alt="" className="rounded-[2.4rem] mb-[1.6rem]" />
-            <h3 className="mb-[.8rem]">Blog Post One</h3>
-            <p className="mb-[.8rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className="flex space-x-[.8rem] items-center">
-              <svg className="w-[2.4rem] h-[2.4rem] fill-black">
-                <use href="/images/sprite.svg#icon-category" />
-              </svg>
-              <h5>Category</h5>
-            </div>
-          </div>
-          <div className="w-[30%] p-[1.6rem] rounded-[2.4rem] bg-gradient-to-b from-white to-lightgreen">
-            <img src="/images/blogpost-image-one.png" alt="" className="rounded-[2.4rem] mb-[1.6rem]" />
-            <h3 className="mb-[.8rem]">Blog Post One</h3>
-            <p className="mb-[.8rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className="flex space-x-[.8rem] items-center">
-              <svg className="w-[2.4rem] h-[2.4rem] fill-black">
-                <use href="/images/sprite.svg#icon-category" />
-              </svg>
-              <h5>Category</h5>
-            </div>
-          </div>
-          <div className="w-[30%] p-[1.6rem] rounded-[2.4rem] bg-gradient-to-b from-white to-lightgreen">
-            <img src="/images/blogpost-image-one.png" alt="" className="rounded-[2.4rem] mb-[1.6rem]" />
-            <h3 className="mb-[.8rem]">Blog Post One</h3>
-            <p className="mb-[.8rem]">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div className="flex space-x-[.8rem] items-center">
-              <svg className="w-[2.4rem] h-[2.4rem] fill-black">
-                <use href="/images/sprite.svg#icon-category" />
-              </svg>
-              <h5>Category</h5>
-            </div>
-          </div>
+          {posts.map((post) => (
+            <PostCard key={post.node.id} post={post.node} />
+          ))}
         </div>
       </section>
 
       <Banner />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+
+  return {
+    props: { posts },
+  };
 }
