@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between">
             <p className="text-black">Lorem ipsum dolor sit amet, consectetuipisicing elit,</p>
 
-            <ul className="flex flex-col mt-[4rem] md:mt-0 md:flex-row space-y-[.8rem] md:space-x-[6.4rem]">
+            <ul className="flex flex-col mt-[4rem] md:mt-0 md:flex-row space-y-[.8rem] md:space-y-0 md:space-x-[6.4rem]">
               <li>
                 <a href="/">Home</a>
               </li>
