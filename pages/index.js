@@ -1,4 +1,3 @@
-import { getPosts } from '@/services/index';
 import Banner from '@/components/Banner';
 import Layout from '@/components/Layout';
 import PostCard from '@/components/PostCard';
@@ -75,21 +74,13 @@ export default function Home({ posts }) {
         </div>
 
         <div className="flex flex-wrap gap-x-[5%] gap-y-[6.4rem]">
-          {posts.map((post) => (
-            <PostCard key={post.node.id} post={post.node} />
-          ))}
+          <PostCard />
+          <PostCard />
+          <PostCard />
         </div>
       </section>
 
       <Banner />
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-
-  return {
-    props: { posts },
-  };
 }

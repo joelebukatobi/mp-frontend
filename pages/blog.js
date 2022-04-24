@@ -12,11 +12,11 @@ export default function Blog() {
         </p>
         <form action="" className="relative flex items-center w-full md:w-1/2 overflow-hidden rounded-[.8rem]">
           <input
-            type="email"
-            placeholder="mail@example.com"
+            type="text"
+            placeholder="Search Blog"
             className="w-full h-[7.2rem] px-[1.6rem] border-[.1rem] border-black/10 rounded-[.8rem]"
           />
-          <button className="absolute right-0 h-[7.2rem] bg-black text-white px-[3.2rem] uppercase">Subscribe</button>
+          <button className="absolute right-0 h-[7.2rem] bg-black text-white px-[3.2rem] uppercase">Search</button>
         </form>
       </div>
 
