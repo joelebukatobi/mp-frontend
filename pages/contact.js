@@ -5,7 +5,7 @@ export default function Contact() {
     <Layout>
       <section
         id="hero"
-        className="container mx-auto w-full flex flex-col md:flex-row justify-between items-center px-[3.2rem] md:px-[4rem] lg:px-[7.2rem] mt-[8rem] mb-[12rem]"
+        className="container mx-auto w-full flex flex-col md:flex-row justify-between items-center px-[3.2rem] md:px-[4rem] lg:px-[4.8rem] mt-[8rem] mb-[12rem]"
       >
         <div className="md:w-[45%] text-black">
           <div className="space-y-[1.6rem]">
@@ -65,7 +65,7 @@ export default function Contact() {
               Hi, there
             </textarea>
           </div>
-          <button className="bg-green rounded-[.8rem] h-[5.6rem] uppercase text-white md:w-1/3">Send Message</button>
+          <button className="bg-green rounded-[.8rem] h-[5.6rem] uppercase text-white ">Send Message</button>
         </form>
       </section>
     </Layout>
