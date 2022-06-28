@@ -28,7 +28,6 @@ h4 {
 
 h5 {
   font-size: 1.4rem;
-  font-weight: 400;
   @media (min-width: 320px) and (max-width: 768px) {
     font-size: 1.6rem;
   }
@@ -52,7 +51,8 @@ li {
 input,
 button,
 textarea,
-label {
+label,
+select {
   font-size: 1.6rem;
 }
 
