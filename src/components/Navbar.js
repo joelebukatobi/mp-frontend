@@ -33,21 +33,21 @@ export default function Navbar() {
           </Link>
         </ul>
         <div className="hidden md:flex justify-between w-[12.9rem]">
-          <Link href="https://facebook.com">
+          <a href="https://www.youtube.com/channel/UCadtR7ppqKYug7FGWHtK31Q">
             <svg className="w-[2.4rem] h-[2.4rem] fill-black cursor-pointer ">
-              <use href="/images/sprite.svg#icon-facebook" />
+              <use href="/images/sprite.svg#icon-youtube" />
             </svg>
-          </Link>
-          <Link href="https://twitter.com">
+          </a>
+          <a href="https://www.twitter.com/mellpitcher_">
             <svg className="w-[2.4rem] h-[2.4rem] fill-black  cursor-pointer">
               <use href="/images/sprite.svg#icon-twitter" />
             </svg>
-          </Link>
-          <Link href="https://instagram.com">
+          </a>
+          <a href="https://www.tiktok.com/@mellpitcher">
             <svg className="w-[2.4rem] h-[2.4rem] fill-black  cursor-pointer">
-              <use href="/images/sprite.svg#icon-instagram" />
+              <use href="/images/sprite.svg#icon-tiktok" />
             </svg>
-          </Link>
+          </a>
         </div>
         <div onClick={toggle} className="md:hidden">
           <svg className="w-[2.4rem] h-[2.4rem] fill-purple cursor-pointer">

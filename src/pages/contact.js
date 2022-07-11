@@ -15,17 +15,11 @@ export default function Contact() {
               Hello <br />
               Let's Get In Touch
             </h3>
-            <p className="text-justify md:text-left leading-[3.2rem]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id aliquet purus, maecenas sodales eu diam enim
-              sit. Egestas nunc non feugiat pharetra. Habitant adipiscing viverra ultrices nisl, at dictum orci, id
-              urna. Sit a amet, ac mi facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id aliquet
-              purus, maecenas sodales eu diam enim sit.
+            <p className="text-justify md:text-left leading-[3.2rem] w-[70%]">
+              For professional and business inquiries you can reach us via the form on this page or you can send an
+              email to Mell at
+              <em className="font-black"> authormellpitcher@gmail.com</em> as well.
             </p>
-          </div>
-
-          <div className="space-y-[1.6rem] mt-[5.6rem]">
-            <p className="">info@mellpitcher.com</p>
-            <p>+234 81791883178</p>
           </div>
         </div>
         <form className="flex flex-col w-full md:w-[45%] mt-[6.4rem] md:mt-0 space-y-[2.4rem]">

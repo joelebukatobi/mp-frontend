@@ -13,10 +13,8 @@ export default function Blog({ posts, recommended, latest, featured, page }) {
     <Layout>
       {/* Header */}
       <div className="container mx-auto px-[3.2rem] md:px-[4rem] lg:px-[4.8rem] w-full flex flex-col items-center space-y-[2.4rem] my-[12rem]">
-        <h1>Blogs and Article</h1>
-        <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        </p>
+        <h1>Blogs and Stories</h1>
+        <p className="text-center">A collection of short stories and blogposts</p>
         <form action="" className="relative flex items-center w-full md:w-1/2 overflow-hidden rounded-[.8rem]">
           <input
             type="text"
@@ -47,11 +45,15 @@ export default function Blog({ posts, recommended, latest, featured, page }) {
         </div>
       </section>
       <hr className="h-[.1rem] bg-black/10 border-none w-[100%]" />
-      <section className="container mx-auto px-[3.2rem] md:px-[10.4rem] lg:px-[4.8rem] my-[8rem]">
-        <div className="flex flex-wrap mx-auto justify-between gap-y-[6.4rem]">
+      <section id="blogpost" className="container mx-auto px-[3.2rem] md:px-[10.4rem] lg:px-[4.8rem] my-[8rem]">
+        <h3 className="mb-[3.2rem]">Blog Posts</h3>
+        <div className="flex flex-wrap mx-auto gap-x-[3.3%] gap-y-[6.4rem]">
           {posts.data.map((post) => (
             <PostCard key={post} post={post} />
           ))}
+        </div>
+        <div className="w-[100%] mt-[6.4rem] flex justify-center">
+          <Pagination pagination={posts.meta.pagination} />
         </div>
       </section>
       <Banner />
@@ -121,8 +123,8 @@ export async function getServerSideProps({ query: { page = 1 } }) {
       populate: ['user', 'user.image', 'image'],
       sort: ['date:asc'],
       pagination: {
-        start: +page === 1 ? 0 : (+page - 1) * BLOG_COUNT,
-        limit: BLOG_COUNT,
+        page: page,
+        pageSize: 3,
       },
       filters: {
         $and: [
@@ -155,7 +157,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
     fetch(`${API_URL}/api/blogs?${featured}`),
   ]);
   const blog = await Promise.all(res.map((res) => res.json()));
-  console.log(blog[0]);
+  console.log(res);
   return {
     props: {
       posts: blog[0],

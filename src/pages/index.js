@@ -17,10 +17,10 @@ export default function Home({ blogpost }) {
           <div className="h-[16rem] md:h-[24rem] my-[2.4rem] md:mt-[15%] xl:mt-[12%] w-[16rem] md:w-[24rem] border-[.24rem] md:border-[.32rem] border-green bg-white overflow-hidden p-[.4rem] md:p-[.8rem] rounded-[50%]">
             <img src="/images/author-image.png" alt="" className="rounded-[50%] md:h-auto w-full" />
           </div>
-          <div className="flex flex-col items-center justify-between w-full bg-[#f4f9f9] py-[2.4rem] px-0 md:px-[1.6rem] space-y-[1.6rem]">
+          <div className="flex flex-col items-center justify-between w-full bg-[#edf8f8] py-[2.4rem] px-0 md:px-[1.6rem] space-y-[1.6rem]">
             <h2 className="text-black">About Me</h2>
             <hr className="bg-green border-0 h-[.24rem] md:h-[.32rem] w-[12rem] md:w-[16rem]" />
-            <p className="text-black md:w-3/4 p-[1.6rem] text-justify md:p-[2.4rem]">
+            <p className="text-black p-[1.6rem] text-justify md:p-[2.4rem]">
               Mell Pitcher is an aspiring author who makes videos on the internet on story and storytelling as well as
               other miscellaneous fiction-related topics. He is growing his following and fostering a community on
               YouTube and TikTok. Mell's debut novel, a science fantasy called The Forger's Malice, is set to release in
@@ -80,7 +80,7 @@ export default function Home({ blogpost }) {
           <p className="uppercase">Blog</p>
           <hr className="bg-green h-[.24rem] md:h-[.32rem] border-0 w-[8rem]" />
           <h2>Short Stories</h2>
-          <p className="md:w-[64rem] text-center">Lorem ipsum dolor sit amet, consectetuipisicing elit.</p>
+          <p className="md:w-[64rem] text-center">A collection of short stories and blogposts</p>
         </div>
 
         <div className="flex flex-wrap justify-between gap-y-[6.4rem]">

@@ -45,21 +45,16 @@ export default function BlogPost({ post, latest, category }) {
               <h5 className="uppercase font-semibold">SHARE THIS ON</h5>
               <hr className="h-[.1rem] block border-none bg-black/10 w-[100%]" />
               <div className=" flex md:flex-col items-center md:justify-center space-x-[2.4rem] md:space-x-[0] md:space-y-[2.4rem]">
-                <Link href="https://facebook.com">
-                  <svg className="w-[1.6rem] h-[1.6rem] fill-black cursor-pointer ">
-                    <use href="/images/sprite.svg#icon-facebook" />
-                  </svg>
-                </Link>
-                <Link href="https://twitter.com">
-                  <svg className="w-[1.6rem] h-[1.6rem] fill-black  cursor-pointer">
+                <a href="https://www.twitter.com/mellpitcher_">
+                  <svg className="w-[2.4rem] h-[2.4rem] fill-black  cursor-pointer">
                     <use href="/images/sprite.svg#icon-twitter" />
                   </svg>
-                </Link>
-                <Link href="https://instagram.com">
-                  <svg className="w-[1.6rem] h-[1.6rem] fill-black  cursor-pointer">
-                    <use href="/images/sprite.svg#icon-instagram" />
+                </a>
+                <a href="https://www.tiktok.com/@mellpitcher">
+                  <svg className="w-[2.4rem] h-[2.4rem] fill-black  cursor-pointer">
+                    <use href="/images/sprite.svg#icon-tiktok" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
             <div className="space-y-[2.4rem] flex flex-col items-center">
